@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BudgetEntity" representedClassName="SmartCarrotFrameworkBudgetEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="accountId" optional="YES" attributeType="Transformable" valueTransformerName="SmartCarrotFramework.StringTransformer"/>
+        <attribute name="alert" optional="YES" attributeType="Transformable" valueTransformerName="SmartCarrotFramework.DecimalTransformer"/>
+        <attribute name="budgeted" optional="YES" attributeType="Transformable" valueTransformerName="SmartCarrotFramework.DecimalTransformer"/>
+        <attribute name="categoryId" optional="YES" attributeType="Transformable" valueTransformerName="SmartCarrotFramework.IntTransformer"/>
+        <attribute name="currency" optional="YES" attributeType="Transformable" valueTransformerName="SmartCarrotFramework.StringTransformer"/>
+        <attribute name="externalId" optional="YES" attributeType="Transformable" valueTransformerName="SmartCarrotFramework.StringTransformer"/>
+        <attribute name="frequencyType" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="Transformable" valueTransformerName="SmartCarrotFramework.StringTransformer"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="TransactionEntity" representedClassName="SmartCarrotFrameworkTransactionEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="accountId" optional="YES" attributeType="Transformable" valueTransformerName="SmartCarrotFramework.StringTransformer"/>
+        <attribute name="amount" optional="YES" attributeType="Transformable" valueTransformerName="SmartCarrotFramework.DecimalTransformer"/>
+        <attribute name="bookingDate" optional="YES" attributeType="Transformable" valueTransformerName="SmartCarrotFramework.DateTransformer"/>
+        <attribute name="bookingText" optional="YES" attributeType="Transformable" valueTransformerName="SmartCarrotFramework.StringTransformer"/>
+        <attribute name="categoryId" optional="YES" attributeType="Transformable" valueTransformerName="SmartCarrotFramework.IntTransformer"/>
+        <attribute name="created" optional="YES" attributeType="Transformable" valueTransformerName="SmartCarrotFramework.DateTransformer"/>
+        <attribute name="currency" optional="YES" attributeType="Transformable" valueTransformerName="SmartCarrotFramework.StringTransformer"/>
+        <attribute name="customProperty1" optional="YES" attributeType="Transformable" valueTransformerName="SmartCarrotFramework.StringTransformer"/>
+        <attribute name="customProperty2" optional="YES" attributeType="Transformable" valueTransformerName="SmartCarrotFramework.StringTransformer"/>
+        <attribute name="externalId" optional="YES" attributeType="Transformable" valueTransformerName="SmartCarrotFramework.StringTransformer"/>
+        <attribute name="id" attributeType="String" valueTransformerName="IntTransformer"/>
+        <attribute name="modified" optional="YES" attributeType="Transformable" valueTransformerName="SmartCarrotFramework.DateTransformer"/>
+        <attribute name="sourceAmount" optional="YES" attributeType="Transformable" valueTransformerName="SmartCarrotFramework.DecimalTransformer"/>
+        <attribute name="sourceCurrency" optional="YES" attributeType="Transformable" valueTransformerName="SmartCarrotFramework.StringTransformer"/>
+        <attribute name="sourceExchangeRate" optional="YES" attributeType="Transformable" valueTransformerName="SmartCarrotFramework.DecimalTransformer"/>
+        <attribute name="userCategoryId" optional="YES" attributeType="Transformable" valueTransformerName="SmartCarrotFramework.IntTransformer"/>
+        <attribute name="userNote" optional="YES" attributeType="Transformable" valueTransformerName="SmartCarrotFramework.StringTransformer"/>
+        <attribute name="valueDate" optional="YES" attributeType="Transformable" valueTransformerName="SmartCarrotFramework.DateTransformer"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="BudgetEntity" positionX="-63" positionY="126" width="128" height="178"/>
+        <element name="TransactionEntity" positionX="-63" positionY="-18" width="128" height="313"/>
+    </elements>
+</model>

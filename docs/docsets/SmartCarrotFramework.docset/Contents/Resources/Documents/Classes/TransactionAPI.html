@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TransactionAPI Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/TransactionAPI" class="dashAnchor"></a>
+    <a title="TransactionAPI Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">SmartCarrotFramework 1.0.2 Docs</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">SmartCarrotFramework Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        TransactionAPI Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BudgetAPI.html">BudgetAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CarrotContext.html">CarrotContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CarrotContextGlobal.html">CarrotContextGlobal</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CategorisationAPI.html">CategorisationAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TransactionAPI.html">TransactionAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZenAPI.html">ZenAPI</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/BudgetFrequency.html">BudgetFrequency</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CarrotContextError.html">CarrotContextError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CategorisationType.html">CategorisationType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Notification.html">Notification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Notification/Name.html">– Name</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Budget.html">Budget</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Transaction.html">Transaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TransactionCategory.html">TransactionCategory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ZenParams.html">ZenParams</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ZenScore.html">ZenScore</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>TransactionAPI</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TransactionAPI</span> <span class="p">:</span> <span class="kt">ModuleAPI</span></code></pre>
+
+                </div>
+              </div>
+            <p>A <code>TransactionAPI</code> implements all the storage and categorisation functions on Transaction.</p>
+
+<p>The object of the class cannot be explicitly instantiated, please call <code><a href="../Classes/CarrotContext.html#/s:20SmartCarrotFramework0B7ContextC17getTransactionAPIAA0fG0CyKF">CarrotContext.getTransactionAPI()</a></code> for that.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/CRUD"></a>
+                <a name="//apple_ref/swift/Section/CRUD" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/CRUD"></a>
+                  <h3 class="section-name"><p>CRUD</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:20SmartCarrotFramework14TransactionAPIC6upsert12transactions10categoriseySayAA0D0VG_SbtKF"></a>
+                    <a name="//apple_ref/swift/Method/upsert(transactions:categorise:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:20SmartCarrotFramework14TransactionAPIC6upsert12transactions10categoriseySayAA0D0VG_SbtKF">upsert(transactions:categorise:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds or updates an array of <code><a href="../Structs/Transaction.html">Transaction</a></code>s.</p>
+
+<p>if a transaction is already categorised, then it will be still recategorised. The method uses <code><a href="../Structs/Transaction.html#/s:20SmartCarrotFramework11TransactionV2idSSvp">Transaction.id</a></code> to determine whether the transaction is already present in the persistent storage and must be updated.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">upsert</span><span class="p">(</span><span class="nv">transactions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/Transaction.html">Transaction</a></span><span class="p">],</span> <span class="nv">categorise</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transactions</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>an array of transactions to be updated or inserted.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>categorise</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>whether the transactions must be categorised before saving into the persistent storage.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:20SmartCarrotFramework14TransactionAPIC6delete12transactionsySayAA0D0VG_tKF"></a>
+                    <a name="//apple_ref/swift/Method/delete(transactions:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:20SmartCarrotFramework14TransactionAPIC6delete12transactionsySayAA0D0VG_tKF">delete(transactions:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deletes an array of <code><a href="../Structs/Transaction.html">Transaction</a></code>s from the persistent storage. The method uses <code><a href="../Structs/Transaction.html#/s:20SmartCarrotFramework11TransactionV2idSSvp">Transaction.id</a></code> to identify a transaction to be deleted.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">delete</span><span class="p">(</span><span class="nv">transactions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/Transaction.html">Transaction</a></span><span class="p">])</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transactions</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>- an array of transactions to be deleted from the persistent storage.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:20SmartCarrotFramework14TransactionAPIC6getAllSayAA0D0VGyKF"></a>
+                    <a name="//apple_ref/swift/Method/getAll()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:20SmartCarrotFramework14TransactionAPIC6getAllSayAA0D0VGyKF">getAll()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns all transactions. <code><a href="../Structs/Transaction.html">Transaction</a></code>s list is unsorted.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getAll</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/Transaction.html">Transaction</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:20SmartCarrotFramework14TransactionAPIC27getAllOrderByDateDescTextIdSayAA0D0VGyKF"></a>
+                    <a name="//apple_ref/swift/Method/getAllOrderByDateDescTextId()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:20SmartCarrotFramework14TransactionAPIC27getAllOrderByDateDescTextIdSayAA0D0VGyKF">getAllOrderByDateDescTextId()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns all transactions from the persistent storage, sorted.</p>
+
+<p>Returns all transactions, ordered by: (in order of priority)
+    - <code>BookingDate</code> desc,
+    - <code>BookingText</code> asc,
+    - <code>id</code>asc</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getAllOrderByDateDescTextId</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/Transaction.html">Transaction</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:20SmartCarrotFramework14TransactionAPIC7getById2idAA0D0VSgSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getById(id:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:20SmartCarrotFramework14TransactionAPIC7getById2idAA0D0VSgSS_tKF">getById(id:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a transaction by it&rsquo;s <code>id</code>. Returns <code>nil</code> if there is no transaction with such an <code>id</code> in the persistent storage.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getById</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Transaction.html">Transaction</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>id</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>transaction id to look for.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Categorise"></a>
+                <a name="//apple_ref/swift/Section/Categorise" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Categorise"></a>
+                  <h3 class="section-name"><p>Categorise</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:20SmartCarrotFramework14TransactionAPIC10categorise12transactionsSayAA0D0VGAH_tKF"></a>
+                    <a name="//apple_ref/swift/Method/categorise(transactions:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:20SmartCarrotFramework14TransactionAPIC10categorise12transactionsSayAA0D0VGAH_tKF">categorise(transactions:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Categorises an array of transactions and updates them in the persistent storage</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">categorise</span><span class="p">(</span><span class="nv">transactions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/Transaction.html">Transaction</a></span><span class="p">])</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/Transaction.html">Transaction</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transactions</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>an array of transactions to be categorised.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An array of categorised transactions, saved into the persistent storage.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:20SmartCarrotFramework14TransactionAPIC10categorise11transactionAA0D0VAG_tKF"></a>
+                    <a name="//apple_ref/swift/Method/categorise(transaction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:20SmartCarrotFramework14TransactionAPIC10categorise11transactionAA0D0VAG_tKF">categorise(transaction:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Categorises a transaction and updates it in the persistent storage</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">categorise</span><span class="p">(</span><span class="nv">transaction</span><span class="p">:</span> <span class="kt"><a href="../Structs/Transaction.html">Transaction</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Transaction.html">Transaction</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transaction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a transaction to be categorised</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>a categorised transaction from the persistent storage</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://carrotlabs.tech" target="_blank" rel="external">Carrot Labs GmbH</a>. All rights reserved. (Last updated: 2020-04-07)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

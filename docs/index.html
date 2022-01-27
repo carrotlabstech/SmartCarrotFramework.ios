@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SmartCarrotFramework  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="SmartCarrotFramework  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">SmartCarrotFramework 1.0.2 Docs</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">SmartCarrotFramework Reference</a>
+        <img id="carat" src="img/carat.png" />
+        SmartCarrotFramework  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/BudgetAPI.html">BudgetAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CarrotContext.html">CarrotContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CarrotContextGlobal.html">CarrotContextGlobal</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CategorisationAPI.html">CategorisationAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TransactionAPI.html">TransactionAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ZenAPI.html">ZenAPI</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/BudgetFrequency.html">BudgetFrequency</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/CarrotContextError.html">CarrotContextError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/CategorisationType.html">CategorisationType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Notification.html">Notification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Notification/Name.html">– Name</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/Budget.html">Budget</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Transaction.html">Transaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/TransactionCategory.html">TransactionCategory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ZenParams.html">ZenParams</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ZenScore.html">ZenScore</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='smartcarrotframework' class='heading'>SmartCarrotFramework</h1>
+
+<p>Version 1.0.2</p>
+
+<p><strong>On device Personal Finance Manager.</strong></p>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>The simplest way to integrate <strong>SmartCarrotFramework</strong> is to use CocoaPods.</p>
+<pre class="highlight plaintext"><code>source 'https://github.com/.../SmartCarrotFramework.specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+target :YourTargetName do
+    use_frameworks!
+
+    pod 'SmartCarrotFramework' 
+end
+</code></pre>
+
+<p><strong>SmartCarrotFramework</strong> is supplied as a &ldquo;fat&rdquo; library and contains code for both Mac and iOS devices. Therefore you can run it in a simulator, as well as on the iOS device.</p>
+<h2 id='licensing' class='heading'>Licensing</h2>
+
+<p>Licenses are granted on per module basis. You share your application bundle id with <strong>CarrotLabs</strong>, and we will send you a mail with the license and instructions. </p>
+
+<p>How to set the license:</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">SmartCarrotFramework</span>
+
+<span class="o">...</span>
+
+<span class="kd">func</span> <span class="nf">setLicense</span><span class="p">(</span><span class="nv">license</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">carrotContext</span> <span class="o">=</span> <span class="kt">CarrotContext</span><span class="p">()</span>
+
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="k">try</span> <span class="n">carrotContext</span><span class="o">.</span><span class="nf">setLicense</span><span class="p">(</span><span class="nv">license</span><span class="p">:</span> <span class="n">license</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+        <span class="o">...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='modules' class='heading'>Modules</h2>
+
+<p><strong>SmartCarrotFramework</strong> consists of few modules:</p>
+
+<ul>
+<li><code><a href="Classes/CategorisationAPI.html">CategorisationAPI</a></code> to categorise transactions.</li>
+<li><code><a href="Classes/TransactionAPI.html">TransactionAPI</a></code> to categorise, manipulate, and store transactions.</li>
+<li><code><a href="Classes/BudgetAPI.html">BudgetAPI</a></code> to set incremental budgets on transactions and be able to receive alerts if a budget did overspent, or did reach its spend threshold.</li>
+<li><code><a href="Classes/ZenAPI.html">ZenAPI</a></code> to let the end user carefully look after own financial health and form positive habits.</li>
+</ul>
+
+<p>The full power of the <strong>SmartCarrotFramework</strong> can be obtained only when all the building blocks are used jointly.</p>
+<h2 id='categorisation' class='heading'>Categorisation</h2>
+
+<p>It is very easy to categorise a transaction: use a <code><a href="Classes/CategorisationAPI.html">CategorisationAPI</a></code> object for that:</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">SmartCarrotFramework</span>
+
+<span class="o">...</span>
+
+<span class="kd">func</span> <span class="nf">doCategorise</span><span class="p">(</span><span class="nv">transactionDescription</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">transactionAmount</span><span class="p">:</span> <span class="kt">Decimal</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">categorisationAPI</span> <span class="o">=</span> <span class="k">try</span> <span class="n">_carrotContext</span><span class="o">.</span><span class="nf">getCategorisationAPI</span><span class="p">()</span>
+
+        <span class="k">let</span> <span class="nv">categoryId</span> <span class="o">=</span> <span class="k">try</span> <span class="n">categorisationAPI</span><span class="o">.</span><span class="nf">categorise</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="n">transactionDescription</span><span class="p">,</span> <span class="nv">amount</span><span class="p">:</span> <span class="n">transactionAmount</span><span class="p">)</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Transaction category is </span><span class="se">\(</span><span class="kt">TransactionCategory</span><span class="p">(</span><span class="n">categoryId</span><span class="p">)</span><span class="o">.</span><span class="nf">toString</span><span class="p">()</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+        <span class="o">...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='transaction-categorisation' class='heading'>Transaction Categorisation</h2>
+
+<p>You don&rsquo;t need to categorise transactions in a separate method call. At the time of <code><a href="Classes/TransactionAPI.html#/s:20SmartCarrotFramework14TransactionAPIC6upsert12transactions10categoriseySayAA0D0VG_SbtKF">TransactionAPI.upsert(transactions:categorise:)</a></code> transactions do categorise automatically.</p>
+<h2 id='budgets' class='heading'>Budgets</h2>
+
+<ul>
+<li><code><a href="Enums/BudgetFrequency.html#/s:20SmartCarrotFramework15BudgetFrequencyO7monthlyyA2CmF">BudgetFrequency.monthly</a></code> budget takes into account all the transactions whose <code><a href="Structs/Transaction.html#/s:20SmartCarrotFramework11TransactionV11bookingDate10Foundation0F0Vvp">Transaction.bookingDate</a></code> belongs to the <strong>current month</strong>.</li>
+<li><code><a href="Enums/BudgetFrequency.html#/s:20SmartCarrotFramework15BudgetFrequencyO6annualyA2CmF">BudgetFrequency.annual</a></code> budget takes into account all the transactions whose <code><a href="Structs/Transaction.html#/s:20SmartCarrotFramework11TransactionV11bookingDate10Foundation0F0Vvp">Transaction.bookingDate</a></code> belongs to the <strong>current year</strong>.</li>
+<li><code><a href="Classes/BudgetAPI.html#/s:20SmartCarrotFramework9BudgetAPIC15getRunningTotal6budgetSo9NSDecimalaAA0D0V_tKF">BudgetAPI.getRunningTotal(budget:)</a></code> is always positive, it is a sum of all the transactions per budget. If a budget&rsquo;s category is a top level category than transactions of the category&rsquo;s sub categories are not added. Budget of the <code><a href="Structs/TransactionCategory.html#/s:20SmartCarrotFramework19TransactionCategoryV13UNCATEGORISEDACvpZ">TransactionCategory.UNCATEGORISED</a></code> category is allowed.</li>
+<li><code><a href="Classes/BudgetAPI.html#/s:20SmartCarrotFramework9BudgetAPIC10getBalance6budgetSo9NSDecimalaAA0D0V_tKF">BudgetAPI.getBalance(budget:)</a></code> is <strong>positive</strong> if budget&rsquo;s running total is less than the budgeted amount and is <strong>negative</strong> otherwise.</li>
+</ul>
+
+<p>When a budget gets saved:</p>
+
+<ul>
+<li>its <code><a href="Structs/Budget.html#/s:20SmartCarrotFramework6BudgetV2idSSvp">Budget.id</a></code> is trimmed</li>
+<li>Negative <code><a href="Structs/Budget.html#/s:20SmartCarrotFramework6BudgetV8budgetedSo9NSDecimalavp">Budget.budgeted</a></code> amount is set to <strong>0</strong></li>
+<li>Negative <code><a href="Structs/Budget.html#/s:20SmartCarrotFramework6BudgetV5alertSo9NSDecimalavp">Budget.alert</a></code> amount is set to <strong>0</strong></li>
+<li>Negative <code><a href="Structs/Budget.html#/s:20SmartCarrotFramework6BudgetV10categoryIdSivp">Budget.categoryId</a></code> is set to <code><a href="Structs/TransactionCategory.html#/s:20SmartCarrotFramework19TransactionCategoryV20UNCATEGORISED_INT_IDSivpZ">TransactionCategory.UNCATEGORISED_INT_ID</a></code></li>
+</ul>
+<h2 id='persistence' class='heading'>Persistence</h2>
+
+<p>All entities are encrypted and stored in the <a href="https://developer.apple.com/documentation/coredata">core data persistent store</a>. The encryption key should be provided by the customer and set right after the license validation:</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">SmartCarrotFramework</span>
+
+<span class="o">...</span>
+
+<span class="kd">func</span> <span class="nf">setLicense</span><span class="p">(</span><span class="nv">license</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">carrotContext</span> <span class="o">=</span> <span class="kt">CarrotContext</span><span class="p">()</span>
+
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="k">try</span> <span class="n">carrotContext</span><span class="o">.</span><span class="nf">setLicense</span><span class="p">(</span><span class="nv">license</span><span class="p">:</span> <span class="n">license</span><span class="p">)</span>
+        <span class="n">carrotContext</span><span class="o">.</span><span class="nf">setEncryption</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="s">"thisIsGreatKey!"</span><span class="p">,</span> <span class="nv">iv</span><span class="p">:</span> <span class="s">"1234567890123456"</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+        <span class="o">...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>the encryption key consists of:</p>
+
+<ul>
+<li>the <strong>key</strong> by itself,</li>
+<li><strong>initialisation vector</strong>, <strong>must be of 16 characters long.</strong></li>
+</ul>
+<h2 id='entity-ids' class='heading'>Entity Ids</h2>
+
+<p>The Framework is not responsible for entity (<code><a href="Structs/Transaction.html">Transaction</a></code>, <code><a href="Structs/Budget.html">Budget</a></code>) unique identifiers. They should be maintained by the customer. The ids are of type <code>String</code> and the customer can use either own backend entity ids or <code>UUID</code> values.</p>
+
+<p>If an entity id is empty, the entity can&rsquo;t be saved into the persistent storage and a respective <code><a href="Enums/CarrotContextError.html#/s:20SmartCarrotFramework0B12ContextErrorO13emptyEntityIdyA2CmF">CarrotContextError.emptyEntityId</a></code> is thrown.</p>
+
+<p>Entity Ids are trimmed before being saved.</p>
+<h2 id='events' class='heading'>Events</h2>
+
+<p>At the moment these four types of events are emitted:</p>
+
+<ul>
+<li><code><a href="Extensions/Notification/Name.html#/s:So18NSNotificationNamea20SmartCarrotFrameworkE24transactionListDidUpdateABvpZ">Notification.Name.transactionListDidUpdate</a></code> if a transaction in the persistent storage got updated, inserted, deleted or categorised.</li>
+<li><code><a href="Extensions/Notification/Name.html#/s:So18NSNotificationNamea20SmartCarrotFrameworkE19budgetListDidUpdateABvpZ">Notification.Name.budgetListDidUpdate</a></code> if a budget in the persistent storage got updated, inserted or deleted.</li>
+<li><code><a href="Extensions/Notification/Name.html#/s:So18NSNotificationNamea20SmartCarrotFrameworkE14budgetDidAlertABvpZ">Notification.Name.budgetDidAlert</a></code> if a budget&rsquo;s <code>runningTotal</code> exceeded its <code>alert</code> value but less than its <code>budgeted</code> value.</li>
+<li><code><a href="Extensions/Notification/Name.html#/s:So18NSNotificationNamea20SmartCarrotFrameworkE18budgetDidOverSpendABvpZ">Notification.Name.budgetDidOverSpend</a></code> if the budget&rsquo;s <code>runningTotal</code> exceeded its <code>budgeted</code> value.</li>
+</ul>
+
+<p>How to subscribe to events:</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">SmartCarrotFramework</span>
+
+<span class="o">...</span>
+
+<span class="kd">func</span> <span class="nf">subscribeToBudgetNotification</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">NotificationCenter</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="nv">forName</span><span class="p">:</span> <span class="o">.</span><span class="n">budgetDidAlert</span><span class="p">,</span> <span class="nv">object</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">queue</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">using</span><span class="p">:</span> <span class="nf">budgetDidAlert</span><span class="p">(</span><span class="nv">_</span><span class="p">:))</span>
+    <span class="kt">NotificationCenter</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="nv">forName</span><span class="p">:</span> <span class="o">.</span><span class="n">budgetDidOverSpend</span><span class="p">,</span> <span class="nv">object</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">queue</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">using</span><span class="p">:</span> <span class="nf">budgetDidOverSpend</span><span class="p">(</span><span class="nv">_</span><span class="p">:))</span>
+<span class="p">}</span>
+
+
+<span class="kd">func</span> <span class="nf">budgetDidAlert</span><span class="p">(</span><span class="n">_</span> <span class="nv">notification</span><span class="p">:</span> <span class="kt">Notification</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">budget</span> <span class="o">=</span> <span class="n">notification</span><span class="o">.</span><span class="n">object</span> <span class="k">as!</span> <span class="kt">Budget</span>
+
+        <span class="nf">print</span><span class="p">(</span><span class="s">"budget alert: </span><span class="se">\(</span><span class="p">(</span><span class="n">notification</span><span class="o">.</span><span class="n">object</span> <span class="k">as!</span> <span class="kt">Budget</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">budgetDidOverSpend</span><span class="p">(</span><span class="n">_</span> <span class="nv">notification</span><span class="p">:</span> <span class="kt">Notification</span><span class="p">)</span> <span class="p">{</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='zen-score' class='heading'>Zen Score</h2>
+
+<p>Zen Score represents a user&rsquo;s financial health score. It falls in range (0; 1) and a higher value means better financial health.</p>
+
+<p>Zen Scores are caclulated for a consequent range of dates (days), the maximum time period is defined by <code><a href="Structs/ZenParams.html#/s:20SmartCarrotFramework9ZenParamsV12MAX_INTERVALSivpZ">ZenParams.MAX_INTERVAL</a></code>. If the requested time interval exceeds the maximum time interval than the scores will be caclulated only for the number of days defined by <code><a href="Structs/ZenParams.html#/s:20SmartCarrotFramework9ZenParamsV12MAX_INTERVALSivpZ">ZenParams.MAX_INTERVAL</a></code>. The <strong>closest</strong> date of the requested time interval will be included into the result set.</p>
+
+<p>Zen Scores require at least one <code><a href="Structs/Budget.html">Budget</a></code> to be created, otherwise <code><a href="Classes/ZenAPI.html">ZenAPI</a></code> will throw an error.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://carrotlabs.tech" target="_blank" rel="external">Carrot Labs GmbH</a>. All rights reserved. (Last updated: 2020-04-07)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

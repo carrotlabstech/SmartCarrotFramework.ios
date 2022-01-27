@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CategorisationAPI Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/CategorisationAPI" class="dashAnchor"></a>
+    <a title="CategorisationAPI Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">SmartCarrotFramework 1.0.2 Docs</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">SmartCarrotFramework Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        CategorisationAPI Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BudgetAPI.html">BudgetAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CarrotContext.html">CarrotContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CarrotContextGlobal.html">CarrotContextGlobal</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CategorisationAPI.html">CategorisationAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TransactionAPI.html">TransactionAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZenAPI.html">ZenAPI</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/BudgetFrequency.html">BudgetFrequency</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CarrotContextError.html">CarrotContextError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CategorisationType.html">CategorisationType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Notification.html">Notification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Notification/Name.html">– Name</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Budget.html">Budget</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Transaction.html">Transaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TransactionCategory.html">TransactionCategory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ZenParams.html">ZenParams</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ZenScore.html">ZenScore</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>CategorisationAPI</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CategorisationAPI</span> <span class="p">:</span> <span class="kt">ModuleAPI</span></code></pre>
+
+                </div>
+              </div>
+            <p>Allows you to categorise and learn a user’s personalisation setting.</p>
+
+<p>The object of the <code>CategorisationAPI</code> class cannot be explicitly instantiated, please call <code><a href="../Classes/CarrotContext.html#/s:20SmartCarrotFramework0B7ContextC20getCategorisationAPIAA0fG0CyKF">CarrotContext.getCategorisationAPI()</a></code> for that.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:20SmartCarrotFramework17CategorisationAPIC10categorise11description6amount10isPersonalSiSS_So9NSDecimalaAA0D4TypeOtKF"></a>
+                    <a name="//apple_ref/swift/Method/categorise(description:amount:isPersonal:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:20SmartCarrotFramework17CategorisationAPIC10categorise11description6amount10isPersonalSiSS_So9NSDecimalaAA0D4TypeOtKF">categorise(description:amount:isPersonal:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Categorises a transaction</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>Throws <code><a href="../Enums/CarrotContextError.html#/s:20SmartCarrotFramework0B12ContextErrorO13notAuthorisedyA2CmF">CarrotContextError.notAuthorised</a></code> if CategorizationContext has not been authorized</p>
+
+</div><div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>Throws <code><a href="../Enums/CarrotContextError.html#/s:20SmartCarrotFramework0B12ContextErrorO17failedToLoadModelyA2CmF">CarrotContextError.failedToLoadModel</a></code> if the model doesn&rsquo;t load</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">categorise</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">amount</span><span class="p">:</span> <span class="kt">Decimal</span><span class="p">,</span> <span class="nv">isPersonal</span><span class="p">:</span> <span class="kt"><a href="../Enums/CategorisationType.html">CategorisationType</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">personal</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>description</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>transaction description</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>amount</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>transaction amount</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isPersonal</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>if personalisation should be applied. Set it to <code>.personal</code> if you want to apply user personalisation settings, and to <code>nonPersonal</code> if you want to use generalised model. Default value is <code>.personal</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:20SmartCarrotFramework17CategorisationAPIC5learn11description6amount18personalCategoryIdySS_So9NSDecimalaSitKF"></a>
+                    <a name="//apple_ref/swift/Method/learn(description:amount:personalCategoryId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:20SmartCarrotFramework17CategorisationAPIC5learn11description6amount18personalCategoryIdySS_So9NSDecimalaSitKF">learn(description:amount:personalCategoryId:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Learns user&rsquo;s categorisation on a transaction</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>Throws <code><a href="../Enums/CarrotContextError.html#/s:20SmartCarrotFramework0B12ContextErrorO13notAuthorisedyA2CmF">CarrotContextError.notAuthorised</a></code> if CategorizationContext has not been authorized</p>
+
+</div><div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>Throws <code><a href="../Enums/CarrotContextError.html#/s:20SmartCarrotFramework0B12ContextErrorO17failedToLoadModelyA2CmF">CarrotContextError.failedToLoadModel</a></code> if the model doesn&rsquo;t load</p>
+
+</div><div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>Throws <code><a href="../Enums/CarrotContextError.html#/s:20SmartCarrotFramework0B12ContextErrorO04loadE0yA2CmF">CarrotContextError.loadError</a></code> if it failed to load user personalised settings.</p>
+
+</div><div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>Throws <code><a href="../Enums/CarrotContextError.html#/s:20SmartCarrotFramework0B12ContextErrorO04saveE0yA2CmF">CarrotContextError.saveError</a></code> if it failed to save user personalised settings.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">learn</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">amount</span><span class="p">:</span> <span class="kt">Decimal</span><span class="p">,</span> <span class="nv">personalCategoryId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>description</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>transaction description</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>amount</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>transaction amount</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>personalCategoryId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>transaction category id, defined by the user</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:20SmartCarrotFramework17CategorisationAPIC5resetyyKF"></a>
+                    <a name="//apple_ref/swift/Method/reset()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:20SmartCarrotFramework17CategorisationAPIC5resetyyKF">reset()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deletes (resets) all user&rsquo;s learnings</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    Throws <code><a href="../Enums/CarrotContextError.html#/s:20SmartCarrotFramework0B12ContextErrorO04saveE0yA2CmF">CarrotContextError.saveError</a></code> if new data could not be saved
+
+</div><div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    Throws <code><a href="../Enums/CarrotContextError.html#/s:20SmartCarrotFramework0B12ContextErrorO13notAuthorisedyA2CmF">CarrotContextError.notAuthorised</a></code> if CategorizationContext has not been authorized
+
+</div><div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    Throws <code><a href="../Enums/CarrotContextError.html#/s:20SmartCarrotFramework0B12ContextErrorO17failedToLoadModelyA2CmF">CarrotContextError.failedToLoadModel</a></code> if the model doesn&rsquo;t load
+
+</div><div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    Throws <code><a href="../Enums/CarrotContextError.html#/s:20SmartCarrotFramework0B12ContextErrorO04saveE0yA2CmF">CarrotContextError.saveError</a></code> if it failed to save user personalised settings.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reset</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://carrotlabs.tech" target="_blank" rel="external">Carrot Labs GmbH</a>. All rights reserved. (Last updated: 2020-04-07)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
